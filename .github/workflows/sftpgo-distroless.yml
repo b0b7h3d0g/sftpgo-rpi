@@ -1,4 +1,4 @@
-name: Edge
+name: Docker Edge
 
 on:
   schedule:
