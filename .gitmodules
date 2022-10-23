@@ -1,0 +1,3 @@
+[submodule "sftpgo"]
+	path = sftpgo
+	url = https://github.com/drakkan/sftpgo
