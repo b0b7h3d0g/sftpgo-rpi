@@ -26,9 +26,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 1
-          repository: drakkan/sftpgo
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -54,7 +51,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: ./sftpgo
           file: ./Dockerfile.distroless
           platforms: linux/arm/v7
           push: ${{ github.event_name != 'pull_request' }}
