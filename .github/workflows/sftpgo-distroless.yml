@@ -53,7 +53,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./sftpgo
+          context: ./sftpgo/
           file: ./Dockerfile.distroless
           platforms: linux/arm/v7
           push: ${{ github.event_name != 'pull_request' }}
